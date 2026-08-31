@@ -1,0 +1,69 @@
+-- 7 Billion Humans (2235) --
+-- 54: Terrain Leveler --
+
+a:
+step n
+mem1 = calc mem1 + c
+pickup c
+write 0
+drop
+if n != wall:
+	jump a
+endif
+b:
+if w == nothing:
+	step s
+	pickup c
+	mem1 = calc mem1 + myitem
+	write mem1
+	drop
+	tell everyone hi
+	step w
+	jump c
+endif
+listenfor hi
+step w
+jump b
+c:
+d:
+if ne == nothing:
+	jump e
+endif
+listenfor hi
+step s
+jump d
+e:
+mem1 = calc e / 49
+step e
+mem2 = set 0
+f:
+pickup c
+write mem1
+drop
+if mem2 == 0:
+	step e
+else:
+	if mem2 == 1:
+		step w
+	endif
+endif
+if e != datacube and
+ mem2 == 0:
+	pickup c
+	write mem1
+	drop
+	mem2 = set 1
+	step s
+else:
+	if w != datacube and
+	 mem2 == 1:
+		pickup c
+		write mem1
+		drop
+		mem2 = set 0
+		step s
+	endif
+endif
+jump f
+
+
