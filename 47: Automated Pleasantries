@@ -1,0 +1,11 @@
+-- 7 Billion Humans (2235) --
+-- 47: Automated Pleasantries --
+
+if w == nothing:
+	a:
+	tell e morning
+endif
+listenfor morning
+jump a
+
+
