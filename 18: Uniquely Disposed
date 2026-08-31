@@ -1,0 +1,22 @@
+-- 7 Billion Humans (2235) --
+-- 18: Uniquely Disposed --
+
+step w
+pickup c
+a:
+if s == worker:
+	step e
+endif
+if ne == worker or
+ e == hole:
+	b:
+	step s
+	if s == shredder:
+		giveto s
+		end
+	endif
+	jump b
+endif
+jump a
+
+

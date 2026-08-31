@@ -1,0 +1,19 @@
+-- 7 Billion Humans (2235) --
+-- 5: An Important Decision --
+
+if w == datacube:
+	step w
+	pickup c
+	a:
+	step w
+	jump a
+endif
+if e == datacube:
+	step e
+	pickup c
+	b:
+	step e
+	jump b
+endif
+
+

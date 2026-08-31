@@ -1,0 +1,26 @@
+-- 7 Billion Humans (2235) --
+-- 20: Reverse Line --
+
+pickup s
+a:
+if se == hole:
+	step s
+	b:
+	if w != hole and
+	 w != datacube:
+		step w
+		jump b
+	endif
+	drop
+	end
+else:
+	c:
+	if se != hole and
+	 e != worker:
+		step e
+		jump c
+	endif
+endif
+jump a
+
+
