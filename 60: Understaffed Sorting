@@ -1,0 +1,56 @@
+-- 7 Billion Humans (2235) --
+-- 60: Understaffed Sorting --
+
+step w
+step w
+if w == wall:
+	a:
+	mem1 = set 0
+	step s
+	b:
+	if c >= mem1:
+		mem1 = set c
+	endif
+	c:
+	if e != wall:
+		step e
+		jump b
+	endif
+	if myitem == nothing:
+		pickup mem1
+		jump c
+	endif
+	step n
+	d:
+	if c == nothing:
+		drop
+		e:
+		if w != wall:
+			step w
+			jump e
+		else:
+			if c == datacube:
+				f:
+				g:
+				pickup c
+				step s
+				drop
+				step n
+				if e != wall:
+					step e
+					jump g
+				endif
+				jump f
+			endif
+		endif
+		jump a
+	else:
+		step w
+		jump d
+	endif
+else:
+	step n
+	end
+endif
+
+
