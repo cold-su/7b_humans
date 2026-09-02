@@ -1,0 +1,64 @@
+-- 7 Billion Humans (2235) --
+-- 63: Defrag Disordered --
+
+a:
+if n == nothing:
+	step n
+endif
+if n == datacube:
+	b:
+	step n
+	if n != hole:
+		jump b
+	else:
+		mem1 = set 0
+	endif
+	c:
+	if myitem == datacube and
+	 c == nothing:
+		drop
+	endif
+	if e == hole and
+	 mem1 == 0:
+		mem1 = set 1
+		step s
+		if c == nothing and
+		 myitem == datacube:
+			drop
+		endif
+	endif
+	if w == hole and
+	 mem1 == 1:
+		mem1 = set 0
+		step s
+		if c == nothing and
+		 myitem == datacube:
+			drop
+		endif
+	endif
+	if c == datacube:
+		mem2 = set c
+	endif
+	if mem1 == 0:
+		step e
+	else:
+		step w
+	endif
+	if w != hole or
+	 s != hole:
+		jump c
+	endif
+	mem3 = nearest datacube
+	if mem4 == 0:
+		pickup mem3
+		mem4 = set 1
+	else:
+		pickup mem2
+		mem4 = set 0
+	endif
+endif
+if n != hole:
+	jump a
+endif
+
+
