@@ -1,0 +1,68 @@
+-- 7 Billion Humans (2235) --
+-- 64: Binary Counter --
+
+mem3 = set 1
+if nw == worker:
+	mem1 = set 9
+	step s
+	jump a
+endif
+mem1 = set 8
+if w == nothing:
+	step s
+else:
+	mem1 = set 4
+	if w == nothing:
+		step s
+	else:
+		mem1 = set 2
+		if w == nothing:
+			step s
+		else:
+			mem1 = set 1
+			if w == nothing:
+				step s
+			endif
+		endif
+	endif
+endif
+pickup c
+step s
+mem2 = set 0
+a:
+comment 1
+b:
+if mem1 == 9:
+	if mem2 == mem1:
+		mem2 = set 0
+		tell everyone ok
+		step s
+		step n
+	endif
+else:
+	if mem2 == mem1:
+		mem2 = set 0
+		if mem3 == 1:
+			mem3 = set 0
+		else:
+			if mem3 == 0:
+				mem3 = set 1
+			endif
+		endif
+	endif
+	listenfor ok
+	if mem3 == 0:
+		drop
+	endif
+	if mem3 == 1:
+		pickup c
+	endif
+endif
+mem2 = calc mem2 + 1
+jump b
+
+
+DEFINE COMMENT 1
+eJwTZGBgaFBhSGFQZ8hgCGVIY0hnyGEoBGKQeC1DTsNiCJthJ0MewyEgPs5QwHATiO8xFDG8YihqeMdQ
+wjAKRsEoGLIAAHLyEHE;
+
