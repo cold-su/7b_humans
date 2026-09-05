@@ -1,0 +1,58 @@
+-- 7 Billion Humans (2235) --
+-- 67: Decimal Doubler --
+
+if s == datacube:
+	pickup s
+	step s
+	step s
+	drop
+else:
+	step s
+	mem1 = calc 0 + 0
+	step s
+	step n
+	a:
+	tell w hi
+	listenfor hi
+	mem1 = calc 0 + 0
+	step s
+	step n
+	jump a
+endif
+b:
+listenfor hi
+mem1 = set c
+mem1 = calc mem1 + mem1
+if mem1 >= 10:
+	mem1 = calc mem1 - 10
+endif
+mem2 = set e
+mem2 = calc mem2 + mem2
+if mem2 >= 10:
+	mem1 = calc mem1 + 1
+endif
+comment 0
+if w == nothing:
+	if mem1 == 0:
+		jump c
+	endif
+	pickup c
+	write mem1
+	drop
+	c:
+	tell everyone hi
+else:
+	tell w hi
+	listenfor hi
+	pickup c
+	write mem1
+	drop
+endif
+jump b
+
+
+DEFINE COMMENT 0
+eJztjL0JwmAYhJ8JJEUKK5HYOYGFlTiDCxgEQxCJiaZQOB3CeURCkJAiI3kuYfU9cLz3/t0Mk7Jiy8Ka
+20+1J1Zm5UQ6ElEwora/MZaY6E7Cg6X9misbLuxUcbBKlZ5UPH+xrp37t868VNM4o/ft4Nmggo4TrX8a
+7z9WTyAQ+DtfzjMmpw;
+
