@@ -1,0 +1,50 @@
+-- 7 Billion Humans (2235) --
+-- 66: Decimal Counter --
+
+if s == datacube:
+	pickup s
+	step s
+	step s
+	if myitem == 1:
+		write 0
+	endif
+	drop
+else:
+	step s
+endif
+if e == nothing:
+	a:
+	b:
+	if w == datacube:
+		tell w hi
+	else:
+		jump b
+	endif
+	listenfor hi
+	step s
+	step n
+	jump a
+else:
+	c:
+	listenfor hi
+	if mem1 == 10:
+		tell e hi
+		listenfor hi
+		mem1 = set 0
+	endif
+	mem1 = calc c + 1
+	if mem1 == 10:
+		pickup c
+		write 0
+		drop
+		tell w hi
+	else:
+		pickup c
+		write mem1
+		drop
+		tell e hi
+	endif
+	jump c
+endif
+
+
